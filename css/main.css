@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=La+Belle+Aurore|Open+Sans");
 
-
 :root {
 	--brightYellow: #e3b505;
 	--darkBrown: #bb9457;
@@ -351,5 +350,56 @@ body {
 	.drink-card__list {
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 1rem;
+	}
+}
+
+/* contact section */
+.contact-container {
+	max-width: 90vw;
+	margin: 0 auto;
+	display: grid;
+	grid-row-gap: 1rem;
+}
+.contact-info {
+	display: grid;
+	justify-content: center;
+}
+.contact-item {
+	margin: 1rem 0;
+	padding: 0.5rem;
+}
+.contact-item__icon {
+	font-size: 3rem;
+	color: var(--yellow);
+}
+.contact-item__title {
+	text-transform: uppercase;
+	margin: 0.5rem 0;
+	letter-spacing: 0.25rem;
+	font-style: italic;
+}
+.contact-item__text {
+	font-size: 1rem;
+	text-transform: uppercase;
+	color: var(--grey);
+}
+@media screen and (min-width: 768px) {
+	.contact-info {
+		grid-template-columns: repeat(3, 1fr);
+		order: -1;
+	}
+}
+@media screen and (min-width: 992px) {
+	.contact-info {
+		grid-template-columns: 1fr;
+		order: 0;
+	}
+	.contact-container {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-column-gap: 2rem;
+	}
+	.contact-map {
+		align-self: center;
 	}
 }
